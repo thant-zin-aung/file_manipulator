@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="androidToPcCopyRoot" minHeight="720.0" minWidth="1280.0" prefHeight="720.0" prefWidth="1280.0" styleClass="androidToPcCopyRoot" stylesheets="@../assets/stylesheets/androidToPcCopyStyles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.AndroidToPcCopyController">
+   <children>
+      <JFXButton fx:id="backToMainButton" focusTraversable="false" layoutX="1125.0" layoutY="651.0" onMouseClicked="#onBackToMainButtonClick" prefHeight="40.0" prefWidth="125.0" text="Go back to main" AnchorPane.bottomAnchor="29.2421875" AnchorPane.rightAnchor="30.0">
+         <styleClass>
+            <String fx:value="backToMainButton" />
+            <String fx:value="buttonStyles" />
+         </styleClass></JFXButton>
+      <HBox fx:id="connectedDeviceBox" alignment="CENTER" prefHeight="62.0" prefWidth="1280.0" styleClass="connectedDeviceBox" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="connectedDeviceLabel" text="Connected Device Info:" />
+            <Pane prefHeight="62.0" prefWidth="77.0" />
+            <ImageView fitHeight="42.0" fitWidth="52.0" layoutX="1078.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/photos/android_white.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="deviceName" text="  Device name - " />
+            <Label fx:id="deviceNameLabel" styleClass="deviceName" text="Unknown" textFill="WHITE" />
+            <Pane prefHeight="62.0" prefWidth="77.0" />
+            <ImageView fitHeight="42.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/photos/product.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="665.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="deviceName" text="  Product - " />
+            <Label fx:id="deviceProductLabel" layoutX="714.0" layoutY="28.0" styleClass="deviceName" text="Unknown" textFill="WHITE" />
+            <Pane layoutX="732.0" layoutY="10.0" prefHeight="62.0" prefWidth="81.0" />
+            <ImageView fitHeight="42.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/photos/connection.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="501.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="deviceName" text="  Status - " />
+            <Label fx:id="deviceStatusLabel" layoutX="25.0" layoutY="18.0" styleClass="deviceName" text="Unknown" textFill="WHITE" />
+         </children>
+      </HBox>
+      <JFXListView fx:id="sourcePathListView" layoutX="37.0" layoutY="127.0" prefHeight="572.0" prefWidth="499.0" styleClass="listViewStyles" AnchorPane.bottomAnchor="21.0" AnchorPane.leftAnchor="37.0" AnchorPane.rightAnchor="744.0" AnchorPane.topAnchor="127.0">
+         <padding>
+            <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+         </padding></JFXListView>
+      <Text layoutX="112.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="pathTitle" text="Android Path - " AnchorPane.bottomAnchor="610.0" AnchorPane.topAnchor="93.0" />
+      <JFXListView fx:id="destPathListView" layoutX="586.0" layoutY="127.0" prefHeight="572.0" prefWidth="499.0" styleClass="listViewStyles" AnchorPane.bottomAnchor="21.0" AnchorPane.rightAnchor="195.0" AnchorPane.topAnchor="127.0">
+         <padding>
+            <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+         </padding></JFXListView>
+      <ImageView fx:id="sourceBackButton" fitHeight="47.0" fitWidth="50.0" layoutX="49.0" layoutY="78.0" onMouseClicked="#clickOnBackButtons" onMouseEntered="#hoverOnBackButtons" onMouseExited="#hoverExitOnBackButtons" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/photos/androidBack.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="pcPathLabel" layoutX="219.0" layoutY="94.0" prefHeight="17.0" prefWidth="289.0" styleClass="pathTitle" text="Unknown" wrapText="true" />
+      <JFXButton fx:id="copyButton" focusTraversable="false" layoutX="1125.0" layoutY="596.0" onMouseClicked="#clickOnCopyButton" prefHeight="40.0" prefWidth="125.0" text="COPY" AnchorPane.bottomAnchor="84.2421875" AnchorPane.rightAnchor="30.0">
+         <styleClass>
+            <String fx:value="copyButton" />
+            <String fx:value="buttonStyles" />
+         </styleClass>
+      </JFXButton>
+      <ImageView fx:id="copyLogo" fitHeight="98.0" fitWidth="101.0" layoutX="1139.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true" rotate="-20.0" AnchorPane.bottomAnchor="459.0" AnchorPane.rightAnchor="43.0" AnchorPane.topAnchor="163.0">
+         <image>
+            <Image url="@../assets/photos/copyGreen.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="586.0" layoutY="71.0" prefHeight="62.0" prefWidth="682.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="71.0">
+         <children>
+            <Label fx:id="androidPathLabel" layoutX="138.0" layoutY="22.0" prefHeight="17.0" prefWidth="487.0" styleClass="pathTitle" text="Unknown" wrapText="true" AnchorPane.rightAnchor="57.0" />
+            <Text layoutX="60.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="pathTitle" text="PC Path - " />
+            <ImageView fx:id="destBackButton" fitHeight="47.0" fitWidth="50.0" layoutY="7.0" onMouseClicked="#clickOnBackButtons" onMouseEntered="#hoverOnBackButtons" onMouseExited="#hoverExitOnBackButtons" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/photos/androidBack.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <VBox fx:id="optionContainer" alignment="CENTER" layoutX="1116.0" layoutY="369.0" prefHeight="139.0" prefWidth="145.0" spacing="30.0" styleClass="optionsContainer" AnchorPane.bottomAnchor="212.0" AnchorPane.rightAnchor="19.0">
+         <children>
+            <JFXRadioButton fx:id="androidToPcOption" onMouseClicked="#clickOnAndroidToPcOption" selected="true" text="Android to PC">
+               <toggleGroup>
+                  <ToggleGroup fx:id="options" />
+               </toggleGroup>
+               <styleClass>
+                  <String fx:value="androidToPcOption" />
+                  <String fx:value="options" />
+               </styleClass>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="pcToAndroidOption" onMouseClicked="#clickOnPcToAndroidOption" text="PC to Android" toggleGroup="$options">
+               <styleClass>
+                  <String fx:value="pcToAndroidOption" />
+                  <String fx:value="options" />
+               </styleClass>
+            </JFXRadioButton>
+         </children>
+      </VBox>
+
+   </children>
+</AnchorPane>

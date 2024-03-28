@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" prefHeight="500.0" prefWidth="950.0" styleClass="root" stylesheets="@../assets/stylesheets/pcToPcCopyStyles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.PcToPcCopyController">
+   <children>
+      <AnchorPane fx:id="animationRoot" prefHeight="500.0" prefWidth="950.0" />
+      <JFXButton focusTraversable="false" layoutX="763.0" layoutY="430.0" onMouseClicked="#onBackToMainButtonClick" prefHeight="45.0" prefWidth="160.0" styleClass="backToMainButton" text="Back to main" />
+      <VBox alignment="CENTER" layoutX="25.0" layoutY="38.0" prefHeight="300.0" prefWidth="280.0" spacing="20.0" styleClass="containers">
+         <children>
+            <VBox prefHeight="140.0" prefWidth="280.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="280.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="selectFileText" text="Select Source Files" />
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="90.0" prefWidth="280.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="101.0" styleClass="selectIconContainer">
+                           <children>
+                              <ImageView fx:id="selectSourceButton" fitHeight="59.0" fitWidth="61.0" onMouseClicked="#clickOnSelectButtons" onMouseEntered="#hoverOnSelectButtons" onMouseExited="#hoverExitFromSelectButtons" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/photos/browse.png" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <VBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="182.0" spacing="10.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="multipleSelectionText" text="Multiple selection">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="detailText" text="Select the files or directories." wrappingWidth="156.69921875" />
+                           </children>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <styleClass>
+                  <String fx:value="spaceContainer" />
+                  <String fx:value="containers" />
+               </styleClass>
+            </VBox>
+            <VBox layoutX="10.0" layoutY="90.0" prefHeight="140.0" prefWidth="280.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="280.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="selectFileText" text="Select Destination Directory" />
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="90.0" prefWidth="200.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="101.0" styleClass="selectIconContainer">
+                           <children>
+                              <ImageView fx:id="selectDestButton" fitHeight="59.0" fitWidth="61.0" onMouseClicked="#clickOnSelectButtons" onMouseEntered="#hoverOnSelectButtons" onMouseExited="#hoverExitFromSelectButtons" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/photos/browse.png" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <VBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="182.0" spacing="10.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="multipleSelectionText" text="Single selection">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="detailText" text="Select the destination directory." wrappingWidth="156.69921875" />
+                           </children>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <styleClass>
+                  <String fx:value="spaceContainer" />
+                  <String fx:value="containers" />
+               </styleClass>
+            </VBox>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" layoutX="334.0" layoutY="38.0" prefHeight="300.0" prefWidth="280.0">
+         <styleClass>
+            <String fx:value="containers" />
+            <String fx:value="spaceContainer" />
+         </styleClass>
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="280.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="selectFileText" text="Source available space" />
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+            <AnchorPane prefHeight="250.0" prefWidth="200.0">
+               <children>
+                  <ProgressIndicator fx:id="sourceProgressIndicator" layoutX="25.0" layoutY="10.0" prefHeight="230.0" prefWidth="230.0" progress="0.0" styleClass="progressIndicator" />
+                  <HBox alignment="CENTER" layoutX="50.0" layoutY="25.0" prefHeight="180.0" prefWidth="180.0" styleClass="progressCover">
+                     <children>
+                        <Label fx:id="sourceSpaceLabel" styleClass="spaceLabel" text="248.4 GB" />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" layoutX="645.0" layoutY="38.0" prefHeight="300.0" prefWidth="280.0">
+         <styleClass>
+            <String fx:value="containers" />
+            <String fx:value="spaceContainer" />
+         </styleClass>
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="280.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="selectFileText" text="Destination available space" />
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+            <AnchorPane prefHeight="250.0" prefWidth="200.0">
+               <children>
+                  <ProgressIndicator fx:id="destProgressIndicator" layoutX="25.0" layoutY="10.0" prefHeight="230.0" prefWidth="230.0" progress="0.0" styleClass="progressIndicator" />
+                  <HBox alignment="CENTER" layoutX="50.0" layoutY="25.0" prefHeight="180.0" prefWidth="180.0" styleClass="progressCover">
+                     <children>
+                        <Label fx:id="destSpaceLabel" styleClass="spaceLabel" text="248.4 GB" />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <JFXButton focusTraversable="false" layoutX="763.0" layoutY="368.0" onMouseClicked="#clickOnCopyButton" prefHeight="45.0" prefWidth="160.0" styleClass="backToMainButton" text="COPY" />
+      <HBox alignment="CENTER_LEFT" layoutX="25.0" layoutY="368.0" prefHeight="112.0" prefWidth="712.0" spacing="20.0">
+         <styleClass>
+            <String fx:value="containers" />
+            <String fx:value="spaceContainer" />
+         </styleClass>
+         <children>
+            <ImageView fitHeight="69.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/photos/space.png" />
+               </image>
+            </ImageView>
+            <VBox alignment="CENTER" prefHeight="112.0" prefWidth="610.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="604.0" spacing="20.0">
+                     <children>
+                        <JFXProgressBar fx:id="beforeInitProgressBar" prefHeight="12.0" prefWidth="378.0" progress="0.0" styleClass="progressBar" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="progressBarDetailText" text="Before initialized space" />
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="47.0" prefHeight="39.0" prefWidth="604.0" spacing="20.0">
+                     <children>
+                        <JFXProgressBar fx:id="afterInitProgressBar" prefHeight="12.0" prefWidth="378.0" progress="0.0">
+                           <styleClass>
+                              <String fx:value="progressBar" />
+                              <String fx:value="initializedProgressBar" />
+                           </styleClass>
+                        </JFXProgressBar>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="progressBarDetailText" text="After initialized space" />
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </HBox>
+   </children>
+</AnchorPane>

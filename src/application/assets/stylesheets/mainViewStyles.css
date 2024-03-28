@@ -1,0 +1,43 @@
+.rootStyle {
+    -fx-background-color: white;
+    -fx-font-family: "Space Mono";
+}
+.authorContainer {
+    -fx-background-color: transparent;
+}
+.authorLabel {
+    -fx-font-size: 12px;
+}
+.availableTags {
+    -fx-background-radius: 10px;
+}
+.availableTags:hover {
+    -fx-cursor: hand;
+}
+.copyTag {
+    -fx-background-color: #23B4FF;
+}
+.validateTag {
+    -fx-background-color: #06E3A2;
+}
+.exitTag {
+    -fx-background-color: #E70000;
+}
+.copyTags {
+    -fx-background-color: white;
+    -fx-border-color: black;
+    -fx-border-radius: 10px;
+}
+.copyTagsContainer {
+    -fx-background-color: transparent;
+}
+.appTitle1 {
+    -fx-font-size: 20px;
+    -fx-font-weight: bolder;
+    -fx-font-family: "Arial";
+}
+.appTitle2 {
+    -fx-font-size: 22;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial";
+}

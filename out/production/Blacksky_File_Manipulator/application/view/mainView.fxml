@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="mainViewRoot" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="850.0" styleClass="rootStyle" stylesheets="@../assets/stylesheets/mainViewStyles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.MainController">
+   <children>
+      <HBox alignment="CENTER" layoutX="-1.0" layoutY="473.0" prefHeight="26.0" prefWidth="850.0" styleClass="authorContainer">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="authorLabel" text="Author - Blacksky" />
+         </children>
+      </HBox>
+      <ImageView fitHeight="500.0" fitWidth="850.0" layoutX="-400.0" layoutY="-93.0" pickOnBounds="true" preserveRatio="true" rotate="45.0">
+         <image>
+            <Image url="@../assets/photos/2.jpg" />
+         </image>
+      </ImageView>
+      <VBox fx:id="mainTagsContainer" alignment="CENTER" layoutX="475.0" layoutY="90.0" prefHeight="374.0" prefWidth="326.0" spacing="30.0">
+         <children>
+            <HBox fx:id="copyTag" alignment="CENTER" onMouseClicked="#clickOnTags" onMouseEntered="#hoverOnTags" onMouseExited="#hoverExitFromTags" prefHeight="80.0" prefWidth="200.0" spacing="20.0">
+               <styleClass>
+                  <String fx:value="copyTag" />
+                  <String fx:value="availableTags" />
+               </styleClass>
+               <children>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/photos/copy%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <VBox alignment="CENTER" prefHeight="100.0" prefWidth="247.0" spacing="5.0">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="tagHeader" text="File Copier" wrappingWidth="215.35528421401978">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="tagBody" text="This tool will make your file copying task to be easy." wrappingWidth="212.74688720703125" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox fx:id="validateTag" alignment="CENTER" layoutX="10.0" layoutY="10.0" onMouseClicked="#clickOnTags" onMouseEntered="#hoverOnTags" onMouseExited="#hoverExitFromTags" prefHeight="80.0" prefWidth="200.0" spacing="20.0">
+               <styleClass>
+                  <String fx:value="validateTag" />
+                  <String fx:value="availableTags" />
+               </styleClass>
+               <children>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/photos/validate.png" />
+                     </image>
+                  </ImageView>
+                  <VBox alignment="CENTER" prefHeight="100.0" prefWidth="249.0" spacing="5.0">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="tagHeader" text="File Validator" wrappingWidth="219.35516214370728">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="tagBody" text="Validate your copied files's size or name. ( Only works in PC )" wrappingWidth="219.94683837890625" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox fx:id="exitTag" alignment="CENTER" layoutX="10.0" layoutY="110.0" onMouseClicked="#clickOnTags" onMouseEntered="#hoverOnTags" onMouseExited="#hoverExitFromTags" prefHeight="80.0" prefWidth="200.0" spacing="20.0">
+               <styleClass>
+                  <String fx:value="exitTag" />
+                  <String fx:value="availableTags" />
+               </styleClass>
+               <children>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/photos/exit.png" />
+                     </image>
+                  </ImageView>
+                  <VBox alignment="CENTER" prefHeight="100.0" prefWidth="241.0" spacing="5.0">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="tagHeader" text="Exit" wrappingWidth="220.15533304214478">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="tagBody" text="Exit from here so we can flush cache files for your PC health." wrappingWidth="221.54693603515625" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Text layoutX="475.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="appTitle1" text="Make your daily tasks easier by using" wrappingWidth="359.7366943359375" />
+      <Text fill="#23b4ff" layoutX="475.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="appTitle2" text="BMF" />
+      <VBox fx:id="copyTagsContainer" alignment="CENTER" layoutX="475.0" layoutY="90.0" prefHeight="374.0" prefWidth="326.0" spacing="30.0" styleClass="copyTagsContainer" visible="false">
+         <children>
+            <HBox fx:id="androidToPcCopyTag" alignment="CENTER" layoutX="10.0" layoutY="102.0" onMouseClicked="#clickOnTags" onMouseEntered="#hoverOnTags" onMouseExited="#hoverExitFromTags" prefHeight="80.0" prefWidth="200.0" spacing="20.0">
+               <styleClass>
+                  <String fx:value="copyTags" />
+                  <String fx:value="availableTags" />
+               </styleClass>
+               <children>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/photos/android.png" />
+                     </image>
+                  </ImageView>
+                  <VBox alignment="CENTER" layoutX="85.0" layoutY="11.0" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="tagHeader" text="Android to PC" textAlignment="CENTER" wrappingWidth="176.95525979995728">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="52.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/photos/computer.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox fx:id="pcToPcCopyTag" alignment="CENTER" layoutX="10.0" layoutY="102.0" onMouseClicked="#clickOnTags" onMouseEntered="#hoverOnTags" onMouseExited="#hoverExitFromTags" prefHeight="80.0" prefWidth="200.0" spacing="20.0">
+               <styleClass>
+                  <String fx:value="copyTags" />
+                  <String fx:value="availableTags" />
+               </styleClass>
+               <children>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/photos/computer.png" />
+                     </image>
+                  </ImageView>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="tagHeader" text="PC to PC" textAlignment="CENTER" wrappingWidth="176.95525979995728">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="52.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/photos/computer.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox fx:id="backToMainTag" alignment="CENTER" layoutX="10.0" layoutY="212.0" onMouseClicked="#clickOnTags" onMouseEntered="#hoverOnTags" onMouseExited="#hoverExitFromTags" prefHeight="80.0" prefWidth="200.0" spacing="20.0">
+               <styleClass>
+                  <String fx:value="copyTags" />
+                  <String fx:value="availableTags" />
+               </styleClass>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="copyTags" text="Back to main" textAlignment="CENTER" wrappingWidth="176.95525979995728">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox fx:id="validateTagsContainer" alignment="CENTER" layoutX="475.0" layoutY="90.0" prefHeight="374.0" prefWidth="326.0" spacing="30.0" styleClass="copyTagsContainer" visible="false">
+         <children>
+            <HBox fx:id="pcToPcValidateTag" alignment="CENTER" layoutX="10.0" layoutY="102.0" onMouseClicked="#clickOnTags" onMouseEntered="#hoverOnTags" onMouseExited="#hoverExitFromTags" prefHeight="80.0" prefWidth="200.0" spacing="20.0">
+               <styleClass>
+                  <String fx:value="copyTags" />
+                  <String fx:value="availableTags" />
+               </styleClass>
+               <children>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/photos/computer.png" />
+                     </image>
+                  </ImageView>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="tagHeader" text="PC to PC" textAlignment="CENTER" wrappingWidth="176.95525979995728">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="52.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/photos/computer.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox fx:id="backToMainTag2" alignment="CENTER" layoutX="10.0" layoutY="212.0" onMouseClicked="#clickOnTags" onMouseEntered="#hoverOnTags" onMouseExited="#hoverExitFromTags" prefHeight="80.0" prefWidth="200.0" spacing="20.0">
+               <styleClass>
+                  <String fx:value="copyTags" />
+                  <String fx:value="availableTags" />
+               </styleClass>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="copyTags" text="Back to main" textAlignment="CENTER" wrappingWidth="176.95525979995728">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

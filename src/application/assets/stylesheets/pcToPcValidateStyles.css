@@ -1,0 +1,62 @@
+.root {
+    -fx-background-color: transparent;
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+    -fx-border-color: white;
+    -fx-border-width: 2px;
+    -fx-font-family: "Roboto Light";
+}
+.animationRoot {
+    -fx-background-color: linear-gradient(to bottom right , #000000  , #120035 );
+    -fx-background-radius: 20px;
+}
+.bottomButtons {
+    -fx-border-style: solid;
+    -fx-border-width: 2px;
+    -fx-border-color: white;
+    -fx-border-radius: 7px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+    -fx-cursor: hand;
+}
+.containers {
+    -fx-border-color: white;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10px;
+}
+.containerTitle {
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+}
+.containerBody {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+.listView {
+
+}
+.listViewStyles {
+    -fx-background-color: transparent;
+    -fx-border-style: solid;
+    -fx-border-width: 0px 1px 0 1px;
+    -fx-border-color: #343434;
+}
+.listViewStyles .scroll-bar:vertical,
+.listViewStyles .scroll-bar:horizontal {
+    -fx-pref-width: 0;
+    -fx-padding: 0;
+    -fx-scale-x: 0;
+}
+.listViewStyles .list-cell {
+    -fx-background-color: transparent;
+}
+.listViewStyles .list-cell .label {
+    -fx-text-fill: white;
+}
+.listViewStyles .list-cell:hover {
+    -fx-background-color: white;
+}
+.listViewStyles .list-cell:hover .label {
+    -fx-text-fill: black;
+}

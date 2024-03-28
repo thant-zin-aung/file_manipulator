@@ -1,0 +1,71 @@
+.root {
+    -fx-background-color: white;
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+    -fx-border-color: orange;
+    -fx-border-width: 2px;
+    -fx-font-family: "Roboto Light";
+}
+.selectedLabel {
+    -fx-font-family: "Space Mono";
+    -fx-font-size: 15px;
+}
+.backToMainButton {
+    -fx-background-color: #FFC709;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+.containers {
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+}
+.spaceContainer {
+    -fx-background-color: #EFEFEF;
+}
+.selectFileText {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+.multipleSelectionText {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+.detailText {
+    -fx-font-size: 14px;
+}
+.selectIconContainer {
+    -fx-background-color: #CECECE;
+    -fx-background-radius: 0 0 0 10px;
+}
+.progressCover {
+    -fx-background-radius: 100%;
+    -fx-background-color: #EFEFEF;
+}
+.progressIndicator .percentage {
+    -fx-fill: none;
+}
+.progressIndicator {
+    -fx-progress-color: orange;
+}
+.spaceLabel {
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+}
+
+.progressBar > .bar,
+.progressBar:indeterminate > .bar {
+    -fx-background-color: orange;
+}
+.progressBar > .track,
+.progressBar > .bar {
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+}
+.initializedProgressBar > .bar {
+    -fx-background-color: linear-gradient(to bottom right , orange , #FF0606);
+}
+.progressBarDetailText {
+    -fx-font-weight: bold;
+}

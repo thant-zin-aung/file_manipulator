@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Blacksky_File_Manipulator:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Blacksky_File_Manipulator_jar</output-path>
+    <root id="archive" name="Blacksky_File_Manipulator.jar">
+      <element id="module-output" name="Blacksky_File_Manipulator" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/Java_Require_Files/jfoenix-8.0.10.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/Java_Require_Files/apache-common-io/org.apache.commons.io.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

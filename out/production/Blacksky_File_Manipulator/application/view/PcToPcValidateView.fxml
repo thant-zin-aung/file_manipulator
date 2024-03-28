@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" onMouseClicked="#doubleClickOnRoot" prefHeight="768.0" prefWidth="1366.0" styleClass="root" stylesheets="@../assets/stylesheets/pcToPcValidateStyles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.PcToPcValidateController">
+   <children>
+      <AnchorPane fx:id="animationRoot" prefHeight="768.0" prefWidth="1366.0" styleClass="animationRoot" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="0.0" />
+      <JFXButton focusTraversable="false" layoutX="54.0" layoutY="702.0" onMouseClicked="#onBackToMainButtonClick" prefHeight="45.0" prefWidth="160.0" styleClass="bottomButtons" text="Back to main" AnchorPane.bottomAnchor="21.0" AnchorPane.leftAnchor="54.0" />
+      <JFXListView fx:id="listView" layoutX="276.0" layoutY="21.0" prefHeight="726.0" prefWidth="1069.0" styleClass="listViewStyles" AnchorPane.bottomAnchor="21.0" AnchorPane.leftAnchor="276.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="21.0" />
+      <JFXButton focusTraversable="false" layoutX="54.0" layoutY="644.0" onMouseClicked="#clickOnValidateButton" prefHeight="45.0" prefWidth="160.0" styleClass="bottomButtons" text="VALIDATE" AnchorPane.bottomAnchor="79.0" AnchorPane.leftAnchor="54.0" />
+      <VBox fx:id="originalContainer" alignment="CENTER" layoutX="36.0" layoutY="79.0" prefHeight="150.0" prefWidth="201.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="37.0" prefWidth="197.0">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="containerTitle" text="Select original directory" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="77.0" prefWidth="197.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="77.0" prefWidth="60.0">
+                     <children>
+                        <ImageView fx:id="originalButton" fitHeight="47.0" fitWidth="49.0" onMouseClicked="#clickOnSelectButtons" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/photos/white_directory.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <VBox alignment="CENTER_LEFT" prefHeight="77.0" prefWidth="138.0">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="containerBody" text="Please select only 1 directory" wrappingWidth="119.27294921875" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox fx:id="copiedContainer" alignment="CENTER" layoutX="36.0" layoutY="284.0" prefHeight="150.0" prefWidth="201.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="37.0" prefWidth="197.0">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="containerTitle" text="Select copied directory" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="77.0" prefWidth="197.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="77.0" prefWidth="60.0">
+                     <children>
+                        <ImageView fx:id="copiedButton" fitHeight="47.0" fitWidth="49.0" onMouseClicked="#clickOnSelectButtons" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/photos/white_directory.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <VBox alignment="CENTER_LEFT" prefHeight="77.0" prefWidth="138.0">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="containerBody" text="Please select only 1 directory" wrappingWidth="119.27294921875" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

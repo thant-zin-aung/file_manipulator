@@ -1,0 +1,91 @@
+.androidToPcCopyRoot {
+    -fx-background-color: white;
+    -fx-font-family: Arial;
+}
+.buttonStyles {
+    -fx-text-fill: white;
+    -fx-font-weight: bolder;
+    -fx-font-size: 13px;
+    -fx-background-radius: 20px;
+    -fx-cursor: hand;
+}
+.backToMainButton {
+    -fx-background-color: #00BA3C;
+    -fx-font-size: 13px
+}
+.copyButton {
+    -fx-background-color: #00BA3C;
+    -fx-font-size: 16px;
+    -fx-font-weight: bolder;
+}
+.redBackground {
+    -fx-background-color: red;
+}
+.orangeBackground {
+    -fx-background-color: #F29D00;
+}
+.connectedDeviceBox {
+    -fx-background-color: red;
+    -fx-text-fill: white;
+    -fx-background-radius: 0 0 50px 50px;
+}
+.deviceName {
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-font-family: Arial;
+}
+.connectedDeviceLabel {
+    -fx-font-weight: bolder;
+    -fx-font-family: Roboto;
+    -fx-font-size: 16px;
+}
+.pathTitle {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+.listViewStyles {
+    -fx-background-radius: 30px;
+    -fx-border-radius: 30px;
+    /*-fx-border-style: solid;*/
+    /*-fx-border-width: 1px;*/
+    /*-fx-border-color: grey;*/
+    -fx-background-color: white;
+}
+.listViewStyles .scroll-bar:vertical,
+.listViewStyles .scroll-bar:horizontal {
+    -fx-pref-width: 0;
+    -fx-padding: 0;
+    -fx-scale-x: 0;
+}
+.listViewStyles .list-cell {
+    -fx-background-color: white;
+    -fx-background-radius: 30px 30px 30px 30px;
+    /*-fx-border-radius: 30px 30px 30px 30px;*/
+}
+.listViewStyles .list-cell:selected {
+    -fx-background-color: #00BA3C;
+}
+.listViewStyles .list-cell:selected .label {
+    -fx-text-fill: white;
+}
+.listViewStyles .list-cell:hover {
+    -fx-background-color: #83FFAC;
+}
+.listViewStyles .list-cell:hover .label {
+    -fx-text-fill: black;
+}
+.optionsContainer {
+    -fx-background-color: white;
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+}
+.options {
+    -fx-font-weight: bold;
+}
+.androidToPcOption {
+
+}
+.pcToAndroidOption {
+
+}
